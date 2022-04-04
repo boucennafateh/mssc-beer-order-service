@@ -1,6 +1,6 @@
-package guru.sfg.beer.order.service.services.beerService;
+package guru.sfg.beer.order.service.services.beer;
 
-import guru.sfg.beer.order.service.services.beerService.model.BeerDto;
+import guru.sfg.beer.order.service.services.beer.model.BeerDto;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;

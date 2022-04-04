@@ -1,4 +1,4 @@
-package guru.sfg.beer.order.service.services.beerService.model;
+package guru.sfg.beer.order.service.services.beer.model;
 import lombok.Data;
 
 import java.math.BigDecimal;
