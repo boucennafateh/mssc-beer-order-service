@@ -22,6 +22,8 @@ import guru.sfg.beer.order.service.domain.Customer;
 import guru.sfg.beer.order.service.domain.OrderStatusEnum;
 import guru.sfg.beer.order.service.repositories.BeerOrderRepository;
 import guru.sfg.beer.order.service.repositories.CustomerRepository;
+import guru.sfg.beer.order.service.services.beerService.BeerService;
+import guru.sfg.beer.order.service.services.beerService.model.BeerDto;
 import guru.sfg.beer.order.service.web.mappers.BeerOrderMapper;
 import guru.sfg.beer.order.service.web.model.BeerOrderDto;
 import guru.sfg.beer.order.service.web.model.BeerOrderPagedList;
@@ -104,6 +106,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
     @Override
     public BeerOrderDto getOrderById(UUID customerId, UUID orderId) {
         return beerOrderMapper.beerOrderToDto(getOrder(customerId, orderId));
+
     }
 
     @Override
@@ -122,6 +125,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
 
             if(beerOrderOptional.isPresent()){
                 BeerOrder beerOrder = beerOrderOptional.get();
+
 
                 // fall to exception if customer id's do not match - order not for customer
                 if(beerOrder.getCustomer().getId().equals(customerId)){
