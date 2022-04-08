@@ -27,7 +27,7 @@ public class BeerServiceRestTemplateImpl implements BeerService{
                 beerServiceHost + BEER_SERVICE_PATH,
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<>() {
+                new ParameterizedTypeReference<BeerDto>() {
                 },
                 upc
         );
