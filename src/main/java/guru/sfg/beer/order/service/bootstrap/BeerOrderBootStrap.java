@@ -29,10 +29,11 @@ public class BeerOrderBootStrap implements CommandLineRunner {
     }
 
     private void loadCustomerData() {
+        UUID uuid = UUID.randomUUID();
         if (customerRepository.count() == 0) {
             Customer customer = customerRepository.save(Customer.builder()
                     .customerName(TASTING_ROOM)
-                    .apiKey(UUID.randomUUID())
+                    .apiKey(uuid)
                     .build());
             log.info("Customer id = " + customer.getId());
         }
