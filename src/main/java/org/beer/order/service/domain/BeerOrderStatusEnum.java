@@ -20,8 +20,10 @@ package org.beer.order.service.domain;
 public enum BeerOrderStatusEnum {
     NEW,
     VALIDATED,
+    VALIDATED_PENDING,
     VALIDATION_EXCEPTION,
     ALLOCATED,
+    ALLOCATED_PENDING,
     ALLOCATION_EXCEPTION,
     PENDING_INVENTORY,
     READY,
